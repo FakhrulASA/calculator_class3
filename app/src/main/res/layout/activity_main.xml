@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/diu"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/number_one"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:inputType="number"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:textSize="30sp"
+        android:background="#BBDEFB"
+        android:hint="number 1" />
+
+    <EditText
+        android:id="@+id/number_two"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="#BBDEFB"
+        android:gravity="center"
+        android:hint="number 2"
+        android:inputType="number"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:weightSum="3"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/add_button"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginHorizontal="10dp"
+            android:textSize="30dp"
+            android:layout_weight="1"
+            android:text="+" />
+        <Button
+            android:id="@+id/minus_button"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginHorizontal="10dp"
+            android:textSize="30dp"
+            android:layout_weight="1"
+            android:text="-" />
+        <Button
+            android:id="@+id/multiply_button"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginHorizontal="10dp"
+            android:textSize="30dp"
+            android:layout_weight="1"
+            android:text="*" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/answer_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:inputType="number"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:textSize="30sp"
+        android:hint="answer"
+        android:background="#FFA000" />
+</LinearLayout>
