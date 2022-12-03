@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -24,6 +25,9 @@ class MainActivity : AppCompatActivity() {
         numberTwo = findViewById(R.id.number_two)
         addButton = findViewById(R.id.add_button)
         answerTv = findViewById(R.id.answer_tv)
+
+        //alt+enter
+        val vm : MainViewModel by viewModels()
 
         addButton.setOnClickListener {
             if (numberOne.text.isNullOrBlank() || numberTwo.text.isNullOrBlank()) {
