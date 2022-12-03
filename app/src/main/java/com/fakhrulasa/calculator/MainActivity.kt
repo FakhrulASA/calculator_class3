@@ -35,10 +35,38 @@ class MainActivity : AppCompatActivity() {
             } else {
                 numOne = numberOne.text.toString().toInt()
                 numTwo = numberTwo.text.toString().toInt()
-                answerTv.text = (numOne!! + numTwo!!).toString()
-                var nextPage = Intent(this, ResultActivity::class.java)
+                vm.saveAnswer(numOne!!+numTwo!!)
+                vm.getAns().observe(this) {
+                    answerTv.text = (it).toString()
+                }
+                val nextPage = Intent(this, ResultActivity::class.java)
                 startActivity(nextPage)
             }
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+    }
+
+    override fun onPause() {
+        super.onPause()
+
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
     }
 }
